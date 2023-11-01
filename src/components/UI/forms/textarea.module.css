@@ -1,0 +1,38 @@
+.textareaCustom {
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	font-size: 1rem;
+	padding-top: 20px;
+	height: 100%;
+	padding-left: 18px;
+	line-height: 1.5;
+	resize: none;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.containerTextarea {
+	position: relative;
+}
+
+.labelTextarea {
+	position: absolute;
+	top: 18px;
+	font-size: 0.8rem;
+	transition: all 0.2s ease-in-out;
+	left: 18px;
+}
+
+.textareaCustom:focus + .labelTextarea {
+	transform: translateY(-0.6rem);
+	font-size: 0.75rem;
+}
+
+.textareaCustom:not(:placeholder-shown) + .labelTextarea {
+	transform: translateY(-0.6rem);
+	font-size: 0.75rem;
+
+	transition: 0.2s;
+}

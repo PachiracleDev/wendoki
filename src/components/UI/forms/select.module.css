@@ -1,0 +1,68 @@
+.containerSelect {
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	font-size: 1rem;
+	padding-top: 24px;
+	height: 100%;
+	padding-left: 18px;
+	line-height: 1.5;
+
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.containerInput {
+	position: relative;
+	height: 4rem;
+}
+
+.containerSelect:focus {
+	border-color: #527461;
+	outline: 2px;
+	box-shadow: 0 0 0 0.2rem #233b39;
+}
+
+.labelSelect {
+	position: absolute;
+	cursor: pointer;
+	top: 18px;
+	transition: all 0.2s ease-in-out;
+	left: 18px;
+}
+
+.resultList {
+	width: 100%;
+	padding: 12px;
+	border-radius: 0.25rem;
+	position: absolute;
+	display: block;
+	top: 70px;
+
+	transition: all 0.2s ease-in-out;
+	left: 0;
+}
+
+.labelTranslate {
+	transform: translateY(-0.6rem);
+	font-size: 0.75rem;
+}
+
+.inputCustom:not(:placeholder-shown) + .labelInput {
+	transform: translateY(-0.6rem);
+	font-size: 0.75rem;
+	color: rgb(194, 190, 190);
+	transition: 0.2s;
+}
+
+.inputCustomError {
+	border: 2px solid #ef4444;
+	outline: 2px;
+	box-shadow: 0 0 0 0.2rem #882e2e;
+	color: #ef4444;
+}
+.inputCustomError:focus {
+	color: rgb(194, 190, 190);
+}
