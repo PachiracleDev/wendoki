@@ -18,19 +18,51 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
+const SeoList = {
+	title: "Wendoki - Productos kawaii ❤️",
+	description:
+		"Tienda online de productos kawaii ❤️, envíos a todo el Perú. Productos de calidad, 100% originales.",
+	href: "/",
+	url: "https://wendoki.com",
+	keywords: "productos kawaii",
+	robots: "all",
+	author: "Wendoki",
+	publisher: "Wendoki",
+	image:
+		"https://bafybeicxj2hpczm6uxsdpsnwyxz6pom6ty4eeb7o6uzuey5btgcxgrrg4e.ipfs.w3s.link/wendoki-2.png",
+};
+
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head>
-				<title>Ecomerce</title>
-				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<meta
-					name="description"
-					content="Gotitas es una plataforma donde puedes compartir tus experiencias y encontrar a personas con las que conectarte."
-				/>
+				<title>{SeoList.title}</title>
+				<meta name="description" content={SeoList.description} />
+				<meta name="keywords" content={SeoList.keywords} />
+				<link rel="canonical" href={SeoList.url} />
+				<meta name="robots" content={SeoList.robots} />
+				<meta name="author" content={SeoList.author} />
+				<meta name="publisher" content={SeoList.publisher} />
+				<meta name="language" content="ES" />
+
+				<meta property="og:title" content={SeoList.title} />
+				<meta property="og:description" content={SeoList.description} />
+				<meta property="og:url" content={SeoList.url} />
+				<meta property="og:image" content={SeoList.image} />
+				<meta property="og:image:width" content="500" />
+				<meta property="og:image:height" content="500" />
+				<meta property="og:image:alt" content="Wendoki" />
+				<meta property="og:type" content="website" />
+
+				<meta name="twitter:title" content={SeoList.title} />
+				<meta name="twitter:description" content={SeoList.description} />
+				<meta name="twitter:image" content={SeoList.image} />
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link
 					rel="icon"
-					href="https://res.cloudinary.com/gongian/image/upload/v1651291924/samples/ecommerce/shoes.png"
+					type="image/png"
+					href="https://res.cloudinary.com/diprat1kf/image/upload/v1698892765/Proyecto_nuevo_4_jyxshs.png"
 				/>
 			</Head>
 			<CartStoreProvider>

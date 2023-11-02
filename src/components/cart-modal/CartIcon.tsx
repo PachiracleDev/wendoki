@@ -1,7 +1,7 @@
 import { useState, useEffect, Fragment } from "react";
-import { BsCart3, BsTrash } from "react-icons/bs";
+import { BsTrash } from "react-icons/bs";
 import { useCartStore, actionTypes } from "@store/cartshopping";
-import { HiXMark } from "react-icons/hi2";
+import { HiOutlineShoppingBag, HiXMark } from "react-icons/hi2";
 import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,7 +30,7 @@ function CartIcon() {
 						{mounted &&
 							state.cart.reduce((acc, item) => acc + item.cantidad, 0)}
 					</span>
-					<BsCart3 size={28} />
+					<HiOutlineShoppingBag size={28} />
 				</div>
 			</div>
 
@@ -51,9 +51,9 @@ function CartIcon() {
 						>
 							<Dialog.Panel className="bg-white absolute right-0 border-l p-2 w-3/4 md:w-1/4  2xl:w-1/6 h-full">
 								<div className="flex justify-between items-center">
-									<h3 className="font-bold flex gap-1 items-center text-2xl">
-										<FaShoppingCart size={23} />
-										Carrito
+									<h3 className="font-bold flex gap-1 items-center text-xl">
+										<HiOutlineShoppingBag size={23} />
+										CARRITO
 									</h3>
 									<HiXMark
 										onClick={() => setOpen(false)}
@@ -215,7 +215,7 @@ function CartIcon() {
 														}}
 														href="/pasarela"
 													>
-														<button className="btn p-2 w-24">
+														<button className="bg-gradient-to-r rounded-md from-primary/60 to-primary text-white font-bold p-2 w-24">
 															{loading ? <LoadingSubmit /> : "Comprar"}
 														</button>
 													</Link>

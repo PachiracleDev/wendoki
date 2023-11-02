@@ -5,13 +5,16 @@ import { AiFillHome } from "react-icons/ai";
 import Link from "next/link";
 import { GiClothes } from "react-icons/gi";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import Image from "next/image";
+import logoImage from "../../../public/logo.png";
 
 function Navbar() {
 	return (
 		<div className="flex items-center sm:px-8 md:px-14 lg:px-24 xl:p-5 shadow-lg xl:px-32 lg:py-3 justify-between p-2 sticky top-0 w-full z-50 bg-gradient-to-r from-primary via-primary/60 to-primary text-white">
 			<Link href="/">
-				<div>
-					<span className="font-bold text-xl">Wendoki</span>
+				<div className="flex items-center">
+					<Image src={logoImage} alt="logo" width={40} height={40} />
+					<span className="font-bold lexend text-xl">en</span>
 				</div>
 			</Link>
 
