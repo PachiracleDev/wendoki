@@ -54,7 +54,7 @@ function Buscador() {
 	};
 
 	return (
-		<div className="bg-white border-b shadow-md z-40 fixed w-full top-14 lg:top-[3.9rem] xl:top-[4.9rem] lg:p-4 p-3">
+		<div className="bg-white border-b shadow-md z-40 fixed w-full top-[62px] lg:top-[4rem] xl:top-[4.9rem] lg:p-4 p-3">
 			<div className="relative lg:border-r-2 lg:max-w-xs">
 				<BsSearch size={17} className="absolute top-1 left-0" />
 				{search.length === 0 && (
